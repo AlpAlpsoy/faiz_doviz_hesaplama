@@ -31,7 +31,7 @@ def get_valid_tcmb_rates(date):
     return None, None, None
 
 def get_exchange_rates_from_tcmb():
-    url = "https://www.tcmb.gov.tr/kurlar/today.xml"
+    url = "http://www.tcmb.gov.tr/kurlar/today.xml"
     response = requests.get(url)
     response.encoding = 'utf-8'
     tree = ET.fromstring(response.text)
